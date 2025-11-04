@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} · {{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
   {% seo %}
 </head>
@@ -23,18 +25,15 @@
       </nav>
     </div>
   </header>
-
   <main class="container">
     {{ content }}
   </main>
-
   <footer class="section">
     <div class="row">
       <div>© <span id="year"></span> LumaLab3D. All rights reserved.</div>
-      <div><a href="https://www.etsy.com/shop/LumaLab3D" target="_blank">Shop on Etsy ↗</a></div>
+      <div><a href="https://www.etsy.com/shop/LumaLab3D" target="_blank" rel="noopener">Shop on Etsy ↗</a></div>
     </div>
   </footer>
-
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

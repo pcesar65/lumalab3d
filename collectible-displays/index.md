@@ -4,6 +4,6 @@ title: Collectible Displays
 ---
 <section class="section">
   <h2>Collectible Displays</h2>
-  <p>Glow houses and furniture for mini figures.</p>
-  <a href="https://www.etsy.com/shop/LumaLab3D" target="_blank">Shop the collection →</a>
+  <p class="sub">Stands, glow houses, and mini furniture for figures.</p>
+  <a class="btn primary" href="https://www.etsy.com/shop/LumaLab3D" target="_blank" rel="noopener">Shop the collection ↗</a>
 </section>
