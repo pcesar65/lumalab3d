@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +24,13 @@
         <a href="/household/">Household</a>
         <a href="/about/">About</a>
       </nav>
-      <button class="menu-btn" aria-label="Open menu" onclick="document.querySelector('.drawer').classList.add('open')"><div class="bar"></div></button>
+      <button class="menu-btn" aria-label="Open menu" onclick="document.querySelector('.drawer').classList.add('open')">
+        <div class="bar"></div>
+      </button>
     </div>
   </header>
 
+  <!-- Right-side drawer -->
   <aside class="drawer" aria-hidden="true">
     <button class="close" aria-label="Close menu" onclick="document.querySelector('.drawer').classList.remove('open')"><span></span></button>
     <h4>Menu</h4>
@@ -38,7 +42,9 @@
     <a href="https://www.etsy.com/shop/LumaLab3D" target="_blank" rel="noopener">Shop on Etsy ↗</a>
   </aside>
 
-  <main class="container">{{ content }}</main>
+  <main class="container">
+    {{ content }}
+  </main>
 
   <footer class="section">
     <div class="row">
@@ -46,6 +52,7 @@
       <div><a href="https://www.etsy.com/shop/LumaLab3D" target="_blank" rel="noopener">Shop on Etsy ↗</a></div>
     </div>
   </footer>
+
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
