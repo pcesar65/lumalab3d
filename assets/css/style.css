@@ -2,45 +2,23 @@
 :root{
   --bg:#f6f9ff; --bg2:#ffffff; --grid:#dbe8ff; --ink:#1b1e27; --muted:#6b7280;
   --brand:#2f80ff; --brand-2:#ffb1c3; --brand-3:#9ce6d2; --card:#ffffff;
-  --ring:rgba(47,128,255,.15); --radius:18px; --shadow:0 10px 30px rgba(26,86,219,.12);
+  --ring:rgba(47,128,255,.15); --radius:18px; --shadow:0 10px 30px rgba(26, 86, 219,.12);
 }
 *{box-sizing:border-box}
-html,body{margin:0}
-body{background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--ink);font-family:Inter,system-ui,Helvetica,Arial,sans-serif;}
+body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--ink);font-family:Inter,system-ui,Helvetica,Arial,sans-serif;}
 a{color:var(--ink);text-decoration:none}
 .container{max-width:1180px;margin:0 auto;padding:0 20px}
-
-/* Top nav */
-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #e6efff}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #e6efff}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}
 .brand .dot{width:12px;height:12px;border-radius:999px;background:conic-gradient(from 0deg at 50% 50%, var(--brand), var(--brand-2), var(--brand-3), var(--brand)); box-shadow:0 0 0 3px #fff, 0 4px 14px rgba(47,128,255,.35)}
 .links a{margin-left:22px;font-weight:700;color:#2b2f3a;opacity:.9}
 .links a:hover{opacity:1}
-
-/* Hamburger (phones/tablets) */
-.menu-btn{display:none;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;border:1px solid #e6efff;background:#fff;box-shadow:0 4px 12px rgba(17,24,39,.06);cursor:pointer}
-.menu-btn .bar{width:20px;height:2px;background:#2b2f3a;border-radius:2px;position:relative}
-.menu-btn .bar::before,.menu-btn .bar::after{content:"";position:absolute;left:0;width:20px;height:2px;background:#2b2f3a;border-radius:2px}
-.menu-btn .bar::before{top:-6px}.menu-btn .bar::after{top:6px}
-
-/* Right drawer */
-.drawer{position:fixed;top:0;right:-320px;width:300px;max-width:88vw;height:100vh;background:#fff;box-shadow:-16px 0 40px rgba(0,0,0,.12);border-left:1px solid #e6efff;transition:right .28s ease;z-index:50;padding:18px}
-.drawer.open{right:0}
-.drawer h4{margin:6px 0 12px 2px}
-.drawer a{display:block;padding:12px 6px;border-radius:10px;color:#1b1e27;font-weight:700}
-.drawer a:hover{background:#f1f6ff}
-.drawer hr{border:none;border-top:1px solid #e6efff;margin:12px 0}
-.drawer .close{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:10px;border:1px solid #e6efff;background:#fff;display:grid;place-items:center;cursor:pointer}
-.drawer .close span{width:18px;height:2px;background:#2b2f3a;transform:rotate(45deg);position:relative}
-.drawer .close span::after{content:"";position:absolute;width:18px;height:2px;background:#2b2f3a;transform:rotate(90deg);left:0}
-
-/* Hero with subtle grid */
 .hero{position:relative;padding:84px 0 40px;background:
   linear-gradient(180deg,rgba(255,255,255,.0),rgba(255,255,255,.6)),
   linear-gradient(90deg, transparent 24px, var(--grid) 25px, transparent 26px),
   linear-gradient(0deg,  transparent 24px, var(--grid) 25px, transparent 26px);
-  background-size:auto,50px 50px,50px 50px;border-bottom:1px solid #e6efff}
+  background-size: auto, 50px 50px, 50px 50px; border-bottom:1px solid #e6efff}
 .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#eef5ff;border:1px solid #d8e6ff;color:#3b6edc;font-weight:700}
 .spark{width:8px;height:8px;border-radius:2px;background:linear-gradient(135deg,#fff,var(--brand));box-shadow:0 0 0 3px #eef5ff}
 .hero h1{font-family:'Playfair Display',serif;font-size:58px;line-height:1.05;margin:14px 0;background:linear-gradient(180deg,#1b1e27,#2b2f3a);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -50,8 +28,6 @@ header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdro
 .btn.primary{background:linear-gradient(135deg,var(--brand),#5aa4ff);color:#fff;border-color:transparent}
 .btn.alt{background:linear-gradient(135deg,var(--brand-2),#ffd1db)}
 .btn:hover{transform:translateY(-1px)}
-
-/* Sections */
 .section{padding:40px 0}
 .section h2{font-size:24px;margin:0 0 18px;color:#2b2f3a;letter-spacing:.2px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
@@ -62,37 +38,11 @@ header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdro
 .card .body{padding:16px}
 .title{font-weight:800}
 .sub{color:var(--muted);font-size:14px;margin-top:2px}
-
-/* Newsletter */
 .newsletter{margin-top:54px;background:linear-gradient(135deg,#eef5ff,#fff0f4 60%, #eefcf7);border:1px solid #e6efff;border-radius:22px;padding:22px}
 .newsletter h3{margin:0 0 6px;color:#1b1e27}
 .newsletter p{margin:0 0 14px;color:#4b5563}
 .newsletter form{display:flex;gap:10px;flex-wrap:wrap}
 input[type=email]{padding:12px 14px;border-radius:12px;border:1px solid #dbe8ff;background:#fff;color:#111;min-width:260px}
 button{padding:12px 16px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--brand),#5aa4ff);color:#fff;font-weight:900;cursor:pointer}
-
-/* Footer */
 footer{padding:40px 0;color:#6b7280}
 footer .row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-
-/* Responsive */
-@media (max-width:1024px){ .hero h1{font-size:46px} }
-@media (max-width:768px){
-  .links{display:none}
-  .menu-btn{display:flex}
-  .hero{padding:64px 0 30px}
-  .hero h1{font-size:38px}
-  .hero p{font-size:16px;max-width:600px}
-  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-  .card .img{aspect-ratio:3/2}
-  input[type=email]{min-width:0;flex:1}
-}
-@media (max-width:420px){
-  .container{padding:0 14px}
-  .brand a{font-size:16px}
-  .hero{padding:56px 0 26px}
-  .hero h1{font-size:30px;line-height:1.12}
-  .badge{transform:scale(.95)}
-  .btn{width:100%;text-align:center}
-  .tag{top:8px;left:8px;font-size:11px}
-}
